@@ -1,0 +1,18 @@
+[data-aos="animX"] {
+    transform: translateX(100px);
+    transition-property: transform;
+  }
+  
+  [data-aos="animX"].aos-animate{
+      transform: translateX(0);
+  }
+  
+[data-aos="animY"] {
+    transform: translateY(100px);
+    transition-property: transform;
+  }
+  
+  [data-aos="animY"].aos-animate{
+      transform: translateY(0);
+  }
+  
