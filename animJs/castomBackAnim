@@ -1,0 +1,43 @@
+const container = document.querySelector('.backAnim');
+for (let i = 0; i <= 110; i++) {
+    const blocks = document.createElement('div');
+    blocks.classList.add('blocks');
+    container.appendChild(blocks);
+    // blocks.style = "background-color: " + 
+    // '#' + (Math.random().toString(16) + '000000').substring(2,8).toUpperCase()
+}
+
+function animateBlocks() {
+    anime({
+        targets: '.blocks',
+        translateX: function() {
+            return anime.random(-700, 700)
+        },
+        translateY: function() {
+            return anime.random(-500, 500)
+        },
+        scale: function() {
+            return anime.random(1, 5)
+        },
+
+        easing: 'linear',
+        duration: 3000,
+        delay: anime.stagger(10),
+        complete: animateBlocks,
+    })
+}
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const back = document.querySelector('.back');
+    window.addEventListener('scroll', () => {
+        let scrollY = window.scrollY / 3;
+        let offsetHeight = back.offsetHeight / 2;
+        console.log(scrollY);
+        console.log(offsetHeight);
+    if (scrollY >= offsetHeight) {
+        animateBlocks();
+    }
+        
+    })
+})

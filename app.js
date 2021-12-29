@@ -1,3 +1,12 @@
+// function asyncCss() {
+//     let css = document.createElement('link');
+//     ccs.rel = 'stylesheet';
+//     css.href = href;
+//     document.head.appendChild(css);
+// }
+
+// asyncCss('')
+
 (function () {
     let canvas = document.createElement('canvas'),
         ctx = canvas.getContext('2d')
