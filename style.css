@@ -10,6 +10,10 @@
     width: 100%;
 }
 
+.mw {
+  max-width: 100%;
+}
+
   /* Button */
 
   @font-face {
@@ -336,4 +340,11 @@ h2 span {
   height: 100px;
   background: #e80202;
   box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.2);
+  /* overflow: hidden;
+  opacity: 0;
+  transition: 2s; */
 }
+
+/* .active {
+  opacity: 1;
+} */

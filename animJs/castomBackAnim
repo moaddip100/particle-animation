@@ -20,22 +20,20 @@ function animateBlocks() {
             return anime.random(1, 5)
         },
 
-        easing: 'linear',
+        easing: 'easeOutBounce',
         duration: 3000,
         delay: anime.stagger(10),
         complete: animateBlocks,
     })
 }
 
-
 document.addEventListener('DOMContentLoaded', () => {
     const back = document.querySelector('.back');
     window.addEventListener('scroll', () => {
         let scrollY = window.scrollY / 3;
         let offsetHeight = back.offsetHeight / 2;
-        console.log(scrollY);
-        console.log(offsetHeight);
     if (scrollY >= offsetHeight) {
+        
         animateBlocks();
     }
         

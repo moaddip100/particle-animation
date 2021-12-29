@@ -23,11 +23,11 @@
             particleLife: 6
 
         }
-    document.querySelector('.head').appendChild(canvas);
+    document.querySelector('.head').appendChild(canvas).classList.add('mw');
 
     window.onresize = function () {
         w = canvas.width = innerWidth,
-            h = canvas.height = innerHeight;
+        h = canvas.height = innerHeight;
     }
 
     class Particle {
